@@ -3,34 +3,56 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     background-color: #2A2A2A;
     @apply text-bodyText min-h-screen;
+  }
+
+  /* Improve text readability on mobile */
+  @media (max-width: 640px) {
+    body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
   }
 }
 
 @layer components {
   .nav-link {
-    @apply text-textSecondary hover:text-secondary transition-colors duration-300;
+    @apply text-white hover:text-secondary transition-colors duration-300;
   }
   
   .section-title {
-    @apply text-3xl font-bold mb-8 text-headingText;
+    @apply text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-white;
   }
   
   .btn-primary {
-    @apply px-6 py-3 bg-transparent border-2 border-secondary text-secondary rounded hover:bg-secondary/10 transition-colors duration-300;
+    @apply px-4 sm:px-6 py-2 sm:py-3 bg-transparent border-2 border-secondary text-secondary rounded hover:bg-secondary/10 transition-colors duration-300 text-sm sm:text-base;
   }
   
   .card {
-    @apply bg-[#3A3A3A] p-6 rounded-lg hover:transform hover:scale-105 transition-transform duration-300;
+    @apply bg-[#3A3A3A] p-4 sm:p-6 rounded-lg hover:transform hover:scale-105 transition-transform duration-300;
   }
 
   .inner-section {
-    @apply bg-[#3A3A3A] rounded-lg p-6 shadow-lg;
+    @apply bg-[#3A3A3A] rounded-lg p-4 sm:p-6 shadow-lg;
   }
 
   .section-text {
-    @apply text-[#EAEAEA];
+    @apply text-[#EAEAEA] text-sm sm:text-base;
+  }
+
+  /* Add responsive container padding */
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Add responsive margins */
+  .section-spacing {
+    @apply my-8 sm:my-12 lg:my-16;
   }
 } 

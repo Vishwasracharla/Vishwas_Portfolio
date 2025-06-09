@@ -17,29 +17,27 @@ const Hero = () => {
           layout="fill"
           objectFit="cover"
           quality={100}
+          priority
         />
-        {/* Removed Overlay for Maximum Brightness */}
-        {/* <div className="absolute inset-0 bg-primary opacity-30"></div> */}
+        {/* Add a dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
-      {/* Content - Adjusted Positioning */}
-      {/* Using a flex container to position name and role together */} 
-      {/* Adjusted position back down */} 
-      <div className="absolute top-1/3 right-24 z-10 flex flex-col items-end">
+      {/* Content - Right Aligned on Desktop, Centered on Mobile */}
+      <div className="absolute top-1/3 md:right-24 right-1/2 md:translate-x-0 translate-x-1/2 z-10 flex flex-col md:items-end items-center w-full max-w-xs md:max-w-none">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-textPrimary drop-shadow-lg font-luckiestGuy"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg font-luckiestGuy mb-4 md:text-right"
         >
           VISHWAS RACHARLA
         </motion.h1>
-        {/* Added Full Stack Developer role */} 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-xl sm:text-2xl md:text-3xl font-semibold text-black drop-shadow-lg font-luckiestGuy"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-black drop-shadow-lg font-luckiestGuy md:text-right"
         >
           FULL STACK DEVELOPER
         </motion.h2>
