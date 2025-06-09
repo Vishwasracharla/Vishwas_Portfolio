@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #2A2A2A;
+    @apply text-bodyText min-h-screen;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-textSecondary hover:text-secondary transition-colors duration-300;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-headingText;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-transparent border-2 border-secondary text-secondary rounded hover:bg-secondary/10 transition-colors duration-300;
+  }
+  
+  .card {
+    @apply bg-[#3A3A3A] p-6 rounded-lg hover:transform hover:scale-105 transition-transform duration-300;
+  }
+
+  .inner-section {
+    @apply bg-[#3A3A3A] rounded-lg p-6 shadow-lg;
+  }
+
+  .section-text {
+    @apply text-[#EAEAEA];
+  }
+} 
