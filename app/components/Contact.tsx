@@ -41,7 +41,7 @@ const Contact = () => {
       <section className="py-10 flex flex-col items-center">
         <h2 className="section-title mb-4">Resume</h2>
         <a
-          href="https://drive.google.com/file/d/1tbxrpfxXfQi1PmnXj8hGXSxsaylesCzs/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/1eT9XhziWr3ouR9RSMWvMojjr9P275kdd/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 mb-8"

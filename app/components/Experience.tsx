@@ -27,6 +27,16 @@ const Experience = () => {
 
   const workExperience = [
     {
+      title: 'Frontend Developer',
+      company: 'Mobius by Gaian',
+      period: 'June 2025 - Present',
+    },
+    {
+      title: 'Full Stack Developer Intern',
+      company: 'Fresher bot (propel 5000)',
+      period: '08/2024 – 05/2025',
+    },
+    {
       title: 'Python Full Stack Developer',
       company: 'EduSkills Academy & AICTE',
     },
@@ -59,6 +69,9 @@ const Experience = () => {
                   {exp.title}
                 </h4>
                 <p className="section-text mb-2">{exp.company}</p>
+                {exp.period && (
+                  <p className="section-text">{exp.period}</p>
+                )}
               </div>
             ))}
           </div>
